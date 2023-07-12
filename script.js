@@ -688,8 +688,63 @@
 // }
 // console.log(arr.every(isBiggerThanOne))
 
-const arr =[1,2,3,4,5]
+// const arr =[1,2,3,4,5]
 
-arr.fill(6,2,4)
+// arr.fill(6,2,4)
 
-console.log(arr);
+// console.log(arr);
+
+// let arr = [22,16,18,1,29]
+
+// console.log(arr.findLast(ele=>ele>18))
+
+
+// let array = [23,21,4,[[34,23,[21,43]]]]
+
+// console.log(array.flat(1))
+
+
+// let arr = [1,2,3,4]
+
+// let multipleArr = arr.map(element=>element*element)
+
+// console.log(multipleArr)
+
+// let string = "apple,orange,banana"
+
+// let part = string.substring(5,12)
+
+// console.log(part)
+
+
+// function sum(a,b,...rest){
+// console.log(rest)
+// }
+
+// sum(10,20,30,40,50)
+
+//  (function (){
+//     let name = `Aflah`
+//     // return name;
+//     console.log(name);
+// })()
+
+
+// const p1 = Promise.resolve("Promise P1"); //returns a promise of resolved value "Promise P1"
+// const p2 = new Promise((resolve, reject) => { //Promise method to resolve or reject values
+//     reject("Promise P2"); //P2 will contain promise of rejecting value "Promise P2", leading to an error while using Promise.all method
+// });
+// const p3 = new Promise((resolve, reject) => { 
+//     resolve("Promise P3"); //P3 will contain resolved value "Promise P3"
+// });
+
+// Promise.all([p1, p2, p3]).then(values => { 
+//     console.log(values); //will generate an error due to the rejection of promise P2
+// });
+
+
+let arr = [2,4,6,5]
+
+let result = arr.find(x=>x > 4)
+
+console.log(result)
