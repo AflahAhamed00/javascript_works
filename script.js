@@ -1,5 +1,4 @@
-
-// function basics  
+// function basics
 // var x = 10;
 // a();
 // b();
@@ -21,7 +20,6 @@
 
 // if we write a output of a function outtside the local function block the engine will not be  able to find answer and gives a output of "not defined"
 
-
 // var a = 10;
 // function a()
 // {
@@ -33,7 +31,6 @@
 
 // scope and lexical environment
 
-
 // function a()
 // {
 //     b();
@@ -41,7 +38,7 @@
 //     {
 //         console.log(x);
 //     }
-    
+
 // }
 
 // var x = 20;
@@ -64,7 +61,7 @@
 // console.log(a);
 
 // closure : function along with its lexical  environment is called closure
-// when u return a function within a function it will return both function and its lexical environment(closure),so it have refrence to its lexical parent even its exicution context gets delted from call stack after completing the work 
+// when u return a function within a function it will return both function and its lexical environment(closure),so it have refrence to its lexical parent even its exicution context gets delted from call stack after completing the work
 
 // function x()
 // {
@@ -82,7 +79,6 @@
 
 // z();
 
-
 // settimeout function :it is a call back function.... while using setimeout java script saves it in another place and runs the remaining code and the setimeout will only be executed once the time interval exceeds
 
 // function x()
@@ -98,8 +94,8 @@
 // x();
 // console.log(a*a)
 
-// while using var as variable in settimeout loop execution it refernce to the same memory space & everytime the call back function saves elsewhere it also have refernce bound to it also the javascript will not 
-// wait for none hence the loop will iterates and always gives the same answer 
+// while using var as variable in settimeout loop execution it refernce to the same memory space & everytime the call back function saves elsewhere it also have refernce bound to it also the javascript will not
+// wait for none hence the loop will iterates and always gives the same answer
 // for(var i=1;i<=10;i++)
 // {
 //     setTimeout(function() {
@@ -121,7 +117,7 @@
 // {
 //     function close(i)
 //     {
-//         setTimeout(function () 
+//         setTimeout(function ()
 //         {
 //             console.log(i)
 //         }, i * 1000);
@@ -129,7 +125,6 @@
 //     }
 //     close(i);
 // }
-
 
 // a();
 // b();
@@ -139,15 +134,13 @@
 //     console.log("a is called");
 // }
 
-
 // function expression
 // var b = function()
 // {
 //    console.log("b is called");
 // }
 
-// differnce between function statement & function expression is in case of hoisting...In case of function statment it works properly because its a pure function but in case of function expression we are assigning function into a variable so during hoisting the value of var will be undefined in memory creation phase only in code execution phase the function is assigned into it until then it is not assigned to b so when we invoke b(); it will throw an error b is not a functiion 
-
+// differnce between function statement & function expression is in case of hoisting...In case of function statment it works properly because its a pure function but in case of function expression we are assigning function into a variable so during hoisting the value of var will be undefined in memory creation phase only in code execution phase the function is assigned into it until then it is not assigned to b so when we invoke b(); it will throw an error b is not a functiion
 
 // anonymous function : these are functions without a name and if use it in function statemnt it will throw error of function must have a name...so the use of anonymous is to use it as values and assign those in to another varible like in function expression
 // function ()
@@ -159,7 +152,7 @@
 
 // var b = function xyz()
 // {
-//     console.log("b is called"); 
+//     console.log("b is called");
 // }
 
 // b();
@@ -169,20 +162,20 @@
 // {
 //     return function()
 //     {
-        
+
 //     }
 // }
 
 // console .log(a());
 
-//      call back function: here the function that is passed as an argument is known as call back function.....so in this example function y() is call back function..call back function is used to not block the main thread(call stack)...when a work that last more time the other works will be blocked because everything works in synchronously in call stack...in order to avoid the blocking of call stack, call back function is used so it will take the fuction elsewhere and only comes to call stack only after it called or after the time exceeds 
+//      call back function: here the function that is passed as an argument is known as call back function.....so in this example function y() is call back function..call back function is used to not block the main thread(call stack)...when a work that last more time the other works will be blocked because everything works in synchronously in call stack...in order to avoid the blocking of call stack, call back function is used so it will take the fuction elsewhere and only comes to call stack only after it called or after the time exceeds
 // function x(param1)
 // {
 //     console.log(param1)
 // }
 
 // x(function y(){
-  
+
 // });
 
 //      example for how event loop works
@@ -216,7 +209,7 @@
 // {
 //     return x % 2;
 // }
- 
+
 // const output = arr.filter(isOdd);
 // console.log(output);
 
@@ -226,7 +219,6 @@
 // const output = arr.filter(x => x % 2);
 
 // console.log(output);
-
 
 //          ARRAY MAP
 
@@ -249,7 +241,7 @@
 //  });
 //  console.log(output);
 
- //     or we can write it as a arrow function
+//     or we can write it as a arrow function
 
 //  const arr = [3,2,7,4];
 
@@ -285,7 +277,6 @@
 
 // console.log(output);
 
-
 // USING REDUCE METHOD TO FIND MAX NUM IN ARRAY
 
 // const arr = [1,2,3,4,5,6,9];
@@ -299,33 +290,32 @@
 //     }
 // },0);
 
-
 // const users = [
 //     {firstName: "akshay", lastName: "saini", age: 26},
 //      {firstName: "donald", lastName: "trump", age: 75},
 //      {firstName: "elon", lastName: "musk", age: 50},
 //       {firstName: "aflah", lastName: "ahamed", age: 24},
 //     ]
-    
+
 //     // we have to find the full name of the all users...here we can use map method to run over all the objects and adding the firstname and lastname to give us full name
-    
+
 //     const output = users.map(x => x.firstName +" "+x.lastName);
 //     console.log(output);
 
-// const users = 
+// const users =
 // [
 //    {firstName: "akshay", lastName: "saini", age: 26},
 //    {firstName: "donald", lastName: "trump", age: 75},
 //    {firstName: "elon", lastName: "musk", age: 50},
-//    {firstName: "aflah", lastName: "ahamed", age: 24}, 
+//    {firstName: "aflah", lastName: "ahamed", age: 24},
 // ]
-    
+
 //     // we have to find the firstname of the people whose age is less than 30....here we can filter out those with age less than 30 and we can use map method to giver= only the first name
-    
+
 // const output = users.filter(x => x.age < 30).map(x => x.firstName);
 // console.log(output);
 
-//    we can also use reduce method to find the firstname of the users 
+//    we can also use reduce method to find the firstname of the users
 // const users =
 // [
 //   {firstName: "akshay", lastName: "saini", age: 26},
@@ -341,7 +331,7 @@
 //     return acc;
 // },[]);
 
-// console.log(output); 
+// console.log(output);
 
 //          COMPARING TWO JAVASCRIPT OBJECTS GIVES FALSE
 // let x = new String("aflah");
@@ -350,7 +340,7 @@
 // console.log(x === y);
 
 //              ARRAY SORT METHOD
-// in case of string its correctly sorts,if u use capital letters it will be first sorted because of ASCII value of uppercase is less than lower case 
+// in case of string its correctly sorts,if u use capital letters it will be first sorted because of ASCII value of uppercase is less than lower case
 // const arr = ['apple','Apple','banana','Orange'];
 
 // const output = arr.sort();
@@ -399,14 +389,12 @@
 
 // for(element of arr)
 // {
-//    console.log(element);    //here the array values are assigned into a new variable name by using "of" & the name is allowed to print 
+//    console.log(element);    //here the array values are assigned into a new variable name by using "of" & the name is allowed to print
 // }
-
-
 
 // function onClick ()
 // {
-//    const element = document.getElementById("hello"); 
+//    const element = document.getElementById("hello");
 //    element.remove();
 // }
 
@@ -442,7 +430,7 @@
 //     callback();
 
 //    const array = [1,2,3,4,5]
-   
+
 //    const newArr = array.map((element) => element * element )
 
 //    console.log(newArr);
@@ -458,7 +446,6 @@
 
 //     console.log(sortedArr);
 // });
-
 
 // function x (callback)
 // {
@@ -477,7 +464,6 @@
 //     console.log(`AFLAH`)
 // },5000);
 
-
 // let myArray = [1, 2, 3, 4];
 // 	let a=[]
 // 	const returnValue = myArray.forEach((element) => {
@@ -487,7 +473,7 @@
 // 	console.log(a);
 
 // function findShort(s){
-  
+
 // 	let splittedArr = s.split(` `)
 
 // 	let newArr = []
@@ -495,14 +481,13 @@
 // 	{
 // 		newArr.push(splittedArr[i].length)
 // 	}
-	
+
 //    let sorted = newArr.sort((a,b)=>a - b)
-	
+
 // 	console.log(sorted[0])
 //    }
 
 //    findShort(`this is My script tutorial`)
-
 
 //       PROMISES
 
@@ -526,8 +511,6 @@
 // 	console.log(Err.message)
 // })
 
-
-
 // function createOrder(cart)
 // {
 // 	const pr = new Promise(function(resolve, reject) {
@@ -545,7 +528,7 @@
 // 		{
 // 			resolve(orderId)
 // 		}
-		
+
 // 	})
 // 	return pr;
 // }
@@ -553,7 +536,7 @@
 // function proceedToPayment(orderId)
 // {
 // 	let pro = new Promise(function(resolve, reject) {
-		
+
 // 		if(!validatePayment(orderId))
 // 		{
 // 			const Err = new Error(`payment not succesfull`)
@@ -589,7 +572,6 @@
 // }
 
 // a()
-
 
 // const a = 20;
 
@@ -671,7 +653,6 @@
 
 // hello()
 
-
 // function a(){
 // 	let x = 10
 // 	function b(){
@@ -698,11 +679,9 @@
 
 // console.log(arr.findLast(ele=>ele>18))
 
-
 // let array = [23,21,4,[[34,23,[21,43]]]]
 
 // console.log(array.flat(1))
-
 
 // let arr = [1,2,3,4]
 
@@ -716,7 +695,6 @@
 
 // console.log(part)
 
-
 // function sum(a,b,...rest){
 // console.log(rest)
 // }
@@ -729,22 +707,84 @@
 //     console.log(name);
 // })()
 
-
 // const p1 = Promise.resolve("Promise P1"); //returns a promise of resolved value "Promise P1"
 // const p2 = new Promise((resolve, reject) => { //Promise method to resolve or reject values
 //     reject("Promise P2"); //P2 will contain promise of rejecting value "Promise P2", leading to an error while using Promise.all method
 // });
-// const p3 = new Promise((resolve, reject) => { 
+// const p3 = new Promise((resolve, reject) => {
 //     resolve("Promise P3"); //P3 will contain resolved value "Promise P3"
 // });
 
-// Promise.all([p1, p2, p3]).then(values => { 
+// Promise.all([p1, p2, p3]).then(values => {
 //     console.log(values); //will generate an error due to the rejection of promise P2
 // });
 
+// let arr = [2,4,6,5]
 
-let arr = [2,4,6,5]
+// let result = arr.find(x=>x > 4)
 
-let result = arr.find(x=>x > 4)
+// console.log(result)
 
-console.log(result)
+//    OBJECT DESTRUCTURING
+
+// const person = {
+//     name:`aflah`,
+//     place:`calicut`,
+//     age:24
+// }
+
+// let {name,place,age} = person
+
+// console.log(name)
+
+// console.log(`Aflah
+// ahamed
+// jebin
+// mohamed`)
+
+// INSERTION SORT
+
+// let a = [23, 14, 64, 11, 9, 13];
+
+// for (let i = 1; i < a.length; i++) {
+//   let temp = a[i];
+//   j = i - 1;
+//   while (j >= 0 && a[j] > temp) {
+//     a[j + 1] = a[j];
+//     j--;
+//   }
+//   a[j + 1] = temp;
+// }
+
+// console.log(a);
+
+// RECUSRION
+
+// let num = 10
+
+// let sum = function (num){
+// if(num > 0){
+
+//    return  num +  sum(num-1)
+// }
+// else{
+//     return false;
+// }
+// }
+// let result = sum(num)
+
+
+// let num = 5
+
+// let factorial = function (num){
+// if(num == 0){
+
+//    return  1
+// }
+// else{
+//     return num *  factorial(num-1);
+// }
+// }
+// let result = factorial(num)
+
+// console.log(result)
