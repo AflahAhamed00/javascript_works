@@ -773,7 +773,6 @@
 // }
 // let result = sum(num)
 
-
 // let num = 5
 
 // let factorial = function (num){
@@ -788,3 +787,212 @@
 // let result = factorial(num)
 
 // console.log(result)
+
+// let websites = []
+
+// for(i = 0;i < 1000;i++){
+//     websites.push(`codewars`)
+// }
+
+// console.log(websites);
+
+// ANAGARAM prblem
+
+// const isAnagram = (test,original)=>{
+// return test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('') ? true :false
+
+// }
+
+// let result = isAnagram('silent','listen')
+
+// console.log(result);
+
+// Longest combination
+
+// function longestConsec(strarr, k) {
+//     if(k <= 0 || k > strarr.length){
+//         return ""
+//     }
+
+//   if(k == 1){
+
+//     let longestElement = strarr[0]
+
+//     for(i = 1;i < strarr.length;i++){
+//         if(longestElement.length < strarr[i].length){
+//           longestElement = strarr[i]
+//         }
+//     }
+//     return longestElement
+//   }
+
+//   if(k > 1){
+//     let longestCombination = "";
+//         for (let i = 0; i <= strarr.length - k; i++) {
+//             let combination = strarr.slice(i, i + k).join("");
+//             if (combination.length > longestCombination.length) {
+//                 longestCombination = combination;
+//             }
+//         }
+//         return longestCombination;
+//   }
+// }
+
+// let result = longestConsec(["tree","appletree","pineappletree","mango"],3)
+
+// console.log(result);
+
+// to part an array
+
+// function partList(arr) {
+//   let newArr = [];
+
+//   for (i = 0; i < arr.length - 1; i++) {
+//     newArr.push([arr.slice(0, i + 1).join(" "), arr.slice(i + 1).join(" ")]);
+//   }
+//   return newArr;
+// }
+
+// let result = partList(["az", "toto", "picaro", "zone", "kiwi"]);
+
+// console.log(result);
+
+// function seriesSum(num){
+
+//     let sum = 0
+
+//     for(i = 0;i < num;i++){
+//         sum+= 1/(1+i*3)
+//     }
+//     return sum.toFixed(2)
+// }
+
+// let result = seriesSum(5)
+
+// console.log(result);
+
+// function reverseLetter(str) {
+//    return str.replace(/[^a-z]/gi,'').split('').reverse().join('')
+//   }
+
+//   let result = reverseLetter(`afl?a!h`)
+
+//   console.log(result);
+
+// function nearestSqr(n){
+// return Math.pow(Math.round(Math.sqrt(n)),2)
+// }
+
+// let result = nearestSqr(111)
+
+// console.log(result);
+
+// function mxdiflg(a1, a2) {
+//   let newArr = a1.concat(a2);
+//   let lengthArr = [];
+//   for (i = 0; i < newArr.length; i++) {
+//     lengthArr.push(newArr[i].length);
+//   }
+//   lengthArr.sort((a, b) => a - b);
+//   let longestLength = lengthArr[lengthArr.length - 1] - lengthArr[0];
+//   return longestLength;
+// }
+
+// let result = mxdiflg(
+//   [
+//     "hoqq",
+//     "bbllkw",
+//     "oox",
+//     "ejjuyyy",
+//     "plmiis",
+//     "xxxzgpsssa",
+//     "xxwwkktt",
+//     "znnnnfqknaz",
+//     "qqquuhii",
+//     "dvvvwz",
+//   ],
+//   ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+// );
+// console.log(result);
+
+// function persistence(num){
+// let number = num.toString()
+// let times = 0
+// while(number.length > 1){
+//   times++
+//   number = number.split('').map(Number).reduce((a,b)=>a * b).toString()
+// }
+// return times
+// }
+
+// let result = persistence(874)
+
+// console.log(result);
+
+// function wave(str) {
+//   let newArr = [];
+//   for (i = 0; i < str.length; i++) {
+//     newArr.push(`${str.replace(str[i], str[i].toUpperCase())}`);
+//   }
+//   return newArr;
+// }
+
+// let result = wave(`helso`);
+
+// console.log(result);
+
+// function factorial(n) {
+//   if (n === 0) {
+//     return 1;
+//   }
+//   let factorial = 1;
+
+//   for (i = n; i > 0; i--) {
+//     factorial *= i;
+//   }
+//   return factorial;
+// }
+
+// let result = factorial(5);
+// console.log(result);
+
+// function divCon(x) {
+//   let stringArr = [];
+//   let integerSum = 0;
+//   for (i = 0; i < x.length; i++) {
+//     if (typeof x[i] === "string") {
+//       stringArr.push(x[i]);
+//     } else {
+//       integerSum += x[i];
+//     }
+//   }
+//   let stringSum = stringArr.map((x) => +x).reduce((a, b) => a + b, 0);
+//   return integerSum - stringSum;
+// }
+
+// let result = divCon(["1", "2", "4", 8, "3", 6, 10]);
+// console.log(result);
+
+
+// function order(words){
+//   return words.split(' ').sort((a,b)=>a.match(/[1-9]/)-b.match(/[1-9]/)).join(' ')
+//   }
+
+//   let result = order(`is2 Thi1s T4est 3a`)
+//   console.log(result);
+
+
+// function reverse(array) {
+//   return array.reverse()
+// }
+
+// let result = reverse([637, 361])
+// console.log(result);
+
+function createPhoneNumber(numbers){
+  let join = numbers.join('')
+  return `(${join.slice(0,3)}) ${join.slice(3,6)}-${join.slice(6)} `
+}
+
+let result = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+console.log(result);
