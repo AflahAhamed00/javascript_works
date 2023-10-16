@@ -973,14 +973,12 @@
 // let result = divCon(["1", "2", "4", 8, "3", 6, 10]);
 // console.log(result);
 
-
 // function order(words){
 //   return words.split(' ').sort((a,b)=>a.match(/[1-9]/)-b.match(/[1-9]/)).join(' ')
 //   }
 
 //   let result = order(`is2 Thi1s T4est 3a`)
 //   console.log(result);
-
 
 // function reverse(array) {
 //   return array.reverse()
@@ -989,10 +987,354 @@
 // let result = reverse([637, 361])
 // console.log(result);
 
-function createPhoneNumber(numbers){
-  let join = numbers.join('')
-  return `(${join.slice(0,3)}) ${join.slice(3,6)}-${join.slice(6)} `
-}
+// function createPhoneNumber(numbers){
+//   let join = numbers.join('')
+//   return `(${join.slice(0,3)}) ${join.slice(3,6)}-${join.slice(6)} `
+// }
 
-let result = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-console.log(result);
+// let result = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+// console.log(result);
+
+// function tidyNumber(n) {
+//   return (
+//     n.toString().split("").join("") ==
+//     n
+//       .toString()
+//       .split("")
+//       .sort((a, b) => a - b)
+//       .join("")
+//   );
+// }
+// let result = tidyNumber(12);
+// console.log(result);
+
+// function twoSum(nums,target){
+//   let newArr = []
+//   for(i=0;i<nums.length-1;i++){
+//     for(j=i+1;j<nums.length;j++){
+//       if(nums[i]+nums[j]===target){
+//         newArr.push(i,j)
+//         break;
+//       }
+//     }
+//     }
+//     return newArr
+// }
+
+// let result = twoSum([1,2,3,4],5)
+// console.log(result);
+
+// var findMedianSortedArrays = function(nums1, nums2) {
+//   let concatArr=nums1.concat(nums2).sort((a,b)=>a-b)
+//     if(concatArr.length % 2=== 0){
+//         return concatArr.slice(concatArr.length/2-1,(concatArr.length/2)+1)
+//     }else{
+//       return concatArr.slice(concatArr.length/2,concatArr.length/2+1)
+//     }
+// };
+
+// console.log(findMedianSortedArrays([1,3],[2,4]));
+
+// var removeDuplicates = function(nums) {
+//   let set1 =Array.from( new Set(nums))
+//   // let newArr = Array.from(set1)
+//   return (set1)
+// };
+
+// console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
+
+// var searchInsert = function(nums, target) {
+//   if(nums.includes(target)){
+//       return nums.indexOf(target)
+//   }else{
+//     nums.push(target)
+//     return nums.sort((a,b)=>a-b).indexOf(target)
+
+//   }
+// };
+
+// console.log(searchInsert([1,3,5,6],2));
+
+// var merge = function(nums1, m, nums2, n) {
+//   nums1.length=m
+//   nums2.length=n
+//  let concatArr = nums1.concat(nums2)
+//  return concatArr.sort((a,b)=>a-b)
+// };
+
+// console.log(merge([0],0,[1],1));
+
+// let a = {}
+// let b = {key:"b"}
+// let c = {key:"c"}
+
+// a[b] = 123
+// a[c] = 456
+
+// console.log(a[b]);
+
+// var isPalindrome = function(s) {
+//   let regex = /[a-z]/g
+//   let smallLetterStr = s.toLowerCase()
+//   let newString = smallLetterStr.match(regex).join('')
+//   let flag = 0
+//   for(i = 0;i < newString.length/2;i++){
+//     if(newString[i]!==newString[newString.length-1-i]){
+//           flag = 1
+//           break;
+//     }
+//   }
+//   if(flag===1){
+//     return false
+//   }else{
+//     return true
+//   }
+// };
+
+// console.log(isPalindrome("A man, a plan, a canal: Panama"));
+
+// var trailingZeroes = function(n) {
+//   product = 1
+//  for(i=n;i>0;i--){
+//      product*=i
+//  }
+//  count = 0
+//  let newArr = product.toString().split('')
+//  console.log(newArr);
+//  for(i=0;i<newArr.length;i++){
+//      if(newArr[newArr.length-1]==0){
+//          count++
+//      }
+//  }
+//  return count
+// };
+
+// console.log(trailingZeroes(5));
+
+// var containsDuplicate = function(nums) {
+//     let flag = 0
+//     for(i=0;i<nums.length-1;i++){
+//         for(j=i+1;j<nums.length;j++){
+//             if(nums[i]===nums[j]){
+//                 flag = 1
+//                 break
+//             }
+//         }
+//     }
+//     if(flag===1){
+//         return true
+//     }else{
+//         return false
+//     }
+// };
+
+// console.log(containsDuplicate([1,2,3,4]));
+
+// function first(arr, n) {
+//     arr.length = n
+//      return arr
+//    }
+
+//    let result = first(['a','b','c','d','e'],2)
+//    console.log(result);
+
+// var reverse = function(x) {
+//   let reversed = x.toString().match(/[0-9]/gi).reverse().join('')
+//   let numb = Number(reversed)
+//   return reversed
+// };
+
+// console.log(reverse(123));
+
+// var myAtoi = function(s) {
+//  let S = s.trim().split(' ')
+//  let sliced = S.slice(0,1).join('')
+//   let numb =Number(sliced)
+//   return numb
+// };
+
+// console.log(myAtoi("4193 with words"));
+
+// var isPalindrome = function(x) {
+//   console.log(x.toString().split('').reverse().join(''));
+//   console.log(x.toString());
+//   return x.toString().split('').reverse().join('')===x.toString()
+// };
+
+// console.log(isPalindrome(121));
+
+// var romanToInt = function (s) {
+
+//   let newArr = []
+//    newArr.push(s.replaceAll("I", 1)+",".replaceAll("V",5)+"".replaceAll("X",10)+"".replaceAll("L",50)+"".replaceAll("C",100)+"".replaceAll("D",500)+"".replaceAll("M",1000));
+//   console.log(newArr);
+// };
+
+// console.log(romanToInt(`XXII`));
+
+// var removeElement = function (nums, val) {
+//   let newArr = [];
+//   for (i = 0; i < nums.length; i++) {
+//     if (nums[i] !== val) {
+//       newArr.push(nums[i]);
+//     }
+//   }
+//   return newArr;
+// };
+
+// console.log(removeElement([3, 2, 2, 1, 3], 1));
+
+// var maximumGap = function (nums) {
+//   let greatestDifference = 0;
+//   nums.sort((a, b) => a - b);
+//   for (i = 0; i < nums.length; i++) {
+//     if (Math.abs(nums[i] - nums[i + 1]) > greatestDifference) {
+//       greatestDifference = Math.abs(nums[i] - nums[i + 1]);
+//     }
+//   }
+//   return greatestDifference;
+// };
+
+// console.log(maximumGap([3, 6, 9, 1]));
+
+// var hammingWeight = function(n) {
+//     let newArr = n.toString().split('')
+//     console.log(newArr);
+//     let count = 0
+//     for(i=0;i<newArr.length;i++){
+//         if(newArr[i]==1){
+//             count++
+//         }
+//     }
+//     return count
+// };
+
+// console.log(hammingWeight(00000000000000000000000000001011));
+
+// var rob = function(nums) {
+//     let newArr = []
+//     for(let i =0;i < nums.length;i++ )
+//     {
+//         if(i % 2 === 0)
+//         {
+//             newArr.push(nums[i])
+//         }
+//     }
+//     console.log(newArr);
+//     let sum = newArr.reduce((a,b)=> a+b)
+//     return sum
+// };
+
+// console.log(rob([1,2,3,4,5,6]))
+
+// var calculate = function(s) {
+//     let strArr =  s.replace(/\D/,'').split('')
+//     let numArr = []
+//     for(i=0;i<strArr.length;i++){
+//         numArr.push(parseInt(strArr[i]))
+//     }
+//     return numArr.reduce((a,b)=>a+b,0)
+//  };
+
+//  console.log(calculate('2+2'));
+
+// var countPrimes = function(n) {
+//     let newArr = []
+//     for(i =;i<n;i++){
+//         for(j=2;j<i;j++){
+//             if(i%j!==0){
+//                 newArr.push(i)
+//             }
+//         }
+//     }
+//     return newArr.length
+// };
+
+// console.log(countPrimes(10));
+
+// function chooseBestSum(t, k, ls) {
+//   let newArr = [];
+//   for (i = 0; i < ls.length; i++) {
+//     for (j = i + 1; j < ls.length; j++) {
+//       for (k = j + 1; k < ls.length; k++) {
+//         newArr.push([ls[i], ls[j], ls[k]]);
+//       }
+//     }
+//   }
+
+//   let sumArr = [];
+//   for (i = 0; i < newArr.length; i++) {
+//     const innerArr = newArr[i];
+//     const innerSum = innerArr.reduce((a, b) => a + b, 0);
+//     sumArr.push(innerSum);
+//   }
+//   let filterArr = [];
+//   filterArr.push(sumArr.filter((x) => x <= t));
+//   let flattenArr = [].concat(...filterArr);
+//   let sortedArr = flattenArr.sort((a, b) => b - a);
+//   return sortedArr[0];
+// }
+
+// let result = chooseBestSum(174, 3, [50, 55, 57, 58, 60]);
+
+// console.log(result);
+
+// function uniTotal(string) {
+//   let numArr = [];
+//   for (i = 0; i < string.length; i++) {
+//     numArr.push(string.charCodeAt(i));
+//   }
+//   return numArr.reduce((a, b) => a + b, 0);
+// }
+
+// let result = uniTotal("aaa");
+// console.log(result);
+
+// function removeUrlAnchor(url){
+//   let newStr = url.slice(0,url.indexOf('#'))
+//   return newStr
+// }
+
+// let result = removeUrlAnchor("www.codewars.com#about")
+// console.log(result);
+
+// let num = 11
+// let flag = 0
+
+// for(i=2;i<num;i++){
+//     if(num%i===0){
+//         flag=1
+//         break
+//     }
+// }
+// if(flag===0){
+//     console.log(`prime`);
+// }else{
+//     console.log(`not prime`);
+// }
+
+// var findDigit = function (num, nth) {
+//     if(nth<=0){
+//         return -1 
+//     }
+//   if (num < 0) {
+//     num = num * -1;
+//     let str = num.toString();
+//     if (nth > str.length) {
+//       return 0;
+//     } else {
+//       return str[str.length - nth];
+//     }
+//   } else {
+//     let str = num.toString();
+//     if (nth > str.length) {
+//       return 0;
+//     } else {
+//       return str[str.length - nth];
+//     }
+//   }
+// };
+// let result = findDigit(5673, 2);
+// console.log(result);
+
+
