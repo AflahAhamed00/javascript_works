@@ -1315,7 +1315,7 @@
 
 // var findDigit = function (num, nth) {
 //     if(nth<=0){
-//         return -1 
+//         return -1
 //     }
 //   if (num < 0) {
 //     num = num * -1;
@@ -1337,4 +1337,64 @@
 // let result = findDigit(5673, 2);
 // console.log(result);
 
+// function sortMyString(S) {
+//     let strArr = S.split('')
+//     let oddStrArr = []
+//     let evenStrArr = []
+//     for(i=0;i<strArr.length;i++){
+//          if(i%2===0){
+//              evenStrArr.push(strArr[i])
+//          }else{
+//              oddStrArr.push(strArr[i])
+//          }
+//     }
+//     let joinedEvenStr = evenStrArr.join('');
+//     let joinedOddStr = oddStrArr.join('')
 
+//      return `${joinedEvenStr} ${joinedOddStr}`;
+//  }
+
+//  let result = sortMyString('CodeWars')
+//  console.log(result);
+
+// function decipherThis(str) {
+//     let newArr = str
+//     console.log(newArr);
+// };
+
+// let result = decipherThis('72olle 103doo 100ya')
+
+// function incrementer(nums) {
+//   let incrementArr = [];
+//   for (i = 0; i < nums.length; i++) {
+//     incrementArr[i] = nums[i] + i + 1;
+//   }
+//   let strArr = incrementArr.toString().split(",");
+
+//   for (i = 0; i < strArr.length; i++) {
+//     if (strArr[i].length > 1) {
+//       strArr[i] = strArr[i].replace(strArr[i][0], "");
+//     }
+//     strArr[i] = parseInt(strArr[i]);
+//   }
+//   return strArr;
+// }
+
+// let result = incrementer([4, 6, 9, 1, 3]);
+// console.log(result);
+
+var filterString = function (value) {
+  let newArr = [];
+  let strArr = value.split("");
+  for (i = 0; i < strArr.length; i++) {
+    if (strArr[i].match(/\d/)) {
+      newArr.push(strArr[i]);
+    }
+  }
+  let num = Number(newArr.join(""));
+
+  return Number(num);
+};
+
+let result = filterString(`1a2b3`);
+console.log(result);
