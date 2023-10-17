@@ -1383,18 +1383,18 @@
 // let result = incrementer([4, 6, 9, 1, 3]);
 // console.log(result);
 
-var filterString = function (value) {
-  let newArr = [];
-  let strArr = value.split("");
-  for (i = 0; i < strArr.length; i++) {
-    if (strArr[i].match(/\d/)) {
-      newArr.push(strArr[i]);
-    }
-  }
-  let num = Number(newArr.join(""));
+// var filterString = function (value) {
+//   let newArr = [];
+//   let strArr = value.split("");
+//   for (i = 0; i < strArr.length; i++) {
+//     if (strArr[i].match(/\d/)) {
+//       newArr.push(strArr[i]);
+//     }
+//   }
+//   let num = Number(newArr.join(""));
 
-  return Number(num);
-};
+//   return Number(num);
+// };
 
-let result = filterString(`1a2b3`);
-console.log(result);
+// let result = filterString(`1a2b3`);
+// console.log(result);
