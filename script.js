@@ -1398,3 +1398,169 @@
 
 // let result = filterString(`1a2b3`);
 // console.log(result);
+
+// var threeSum = function (nums) {
+
+//   const sameArr = nums.every(num=>num===nums )
+//   console.log(sameArr);
+//   if(sameArr){
+//     return [[0,0,0]]
+//   }
+//   let tripletArr = [];
+
+//   for (i = 0; i < nums.length; i++) {
+//     for (j = 0; j < nums.length; j++) {
+//       for (k = 0; j < nums.length; j++) {
+//         if (i != j && i != k && j != k && nums[i] + nums[j] + nums[k] === 0) {
+//           tripletArr.push([nums[i], nums[j], nums[k]]);
+//         }
+//       }
+//     }
+//   }
+//   let newArr = []
+//   for(i=0;i<tripletArr.length;i++){
+//     if(i%2!=0){
+//         newArr.push(tripletArr[i])
+//     }
+//   }
+//   return newArr
+// };
+
+// console.log(threeSum([-1,0,1,2,-1,-4]));
+
+// function isPythagoreanTriple(integers) {
+//   for (i = 0; i < integers.length; i++) {
+//     if (
+//       Math.pow(integers[i], 2) + Math.pow(integers[i + 1], 2) ===
+//         Math.pow(integers[i + 2], 2) ||
+//       Math.pow(integers[i + 1], 2) + Math.pow(integers[i + 2], 2) ===
+//         Math.pow(integers[i], 2) ||
+//       Math.pow(integers[i], 2) + Math.pow(integers[i + 2], 2) ===
+//         Math.pow(integers[i + 1], 2)
+//     ) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
+
+// let result = isPythagoreanTriple([3, 4, 5]);
+// console.log(result);
+
+// let arr = [10,20,30,40]
+// console.log(arr[1.0]);
+
+// how to identify if given number is a power of 3 in js
+
+// function powerOfThree(n){
+//   return Math.log10(n)/Math.log10(3)%1===0
+// }
+
+// let result = powerOfThree(81)
+// console.log(result);
+
+// console.log(Math.log10(27)/Math.log10(3));
+// console.log(Math.log2(200));
+
+// var removeDuplicates = function(nums) {
+//     return [...new Set(nums)]
+// };
+
+// let result = removeDuplicates([1,1,2])
+// console.log(result);
+
+// var isPerfectSquare = function(num) {
+//     console.log(Math.sqrt(num)%1);
+//     return num===1 ||Math.sqrt(num)%1===0
+// };
+
+// let result = isPerfectSquare(14)
+// console.log(result);
+
+// function cubeOdd(arr) {
+//   if (arr.some((x)=>/\D/g.test(x))) {
+//     return undefined;
+//   } else {
+//     let newArr = arr.filter((x) => x % 2 === 1);
+
+//     let cubedArr = newArr.map((x) => Math.pow(x, 3));
+
+//     let sum = cubedArr.reduce((a, b) => a + b, 0);
+//     return sum;
+//   }
+// }
+
+// let result = cubeOdd([1,2,3,4]);
+// console.log(result);
+
+// var superPow = function(a, b) {
+//     let joinedB =Number( b.join(''))
+//     return Math.pow(a,joinedB)
+// };
+
+// let result = superPow(2,[1,0])
+// console.log(result);
+
+// var countSegments = function(s) {
+//     let trimStr = s.trim()
+//     let finalStr = trimStr.replace(/\s+/g," ")
+//     return finalStr ===''?0: finalStr.split(' ').length
+// };
+
+// let result = countSegments("Of all the gin joints in all the towns in all the world,   ")
+// console.log(result);
+
+// var find132pattern = function(nums) {
+//     const n = nums.length;
+
+//     for (let i = 0; i < n - 2; i++) {
+//         for (let j = i + 1; j < n - 1; j++) {
+//             for (let k = j + 1; k < n; k++) {
+//                 if (nums[i] < nums[k] && nums[k] < nums[j]) {
+//                     return true;
+//                 }
+//             }
+//         }
+//     }
+
+//     return false;
+// };
+
+// let result = find132pattern([1,2,3,4])
+// console.log(result);
+
+// var hammingDistance = function(x, y) {
+//     let binaryOfX = x.toString(2).padStart(4,0)
+//     let binaryOfY = y.toString(2).padStart(4,0)
+
+//     let distance = 0
+//     for(i=0;i<binaryOfX.length;i++){
+//         if(binaryOfX[i]!==binaryOfY[i]){
+//             distance++
+//         }
+//     }
+//     return distance
+// };
+
+// let result = hammingDistance(680142203,1111953568)
+// console.log(result);
+
+// var findComplement = function (num) {
+//   let binary = num.toString(2);
+//   console.log(binary);
+//   let splitted = binary.split("");
+//   console.log(splitted);
+//   for (i = 0; i < splitted.length; i++) {
+//     if (splitted[i] === "1") {
+//       splitted[i] = "0";
+//     } else {
+//       splitted[i] = "1";
+//     }
+//   }
+//   let complementStr = splitted.join("");
+//   return parseInt(complementStr, 2);
+// };
+
+// let result = findComplement(5);
+// console.log(result);
