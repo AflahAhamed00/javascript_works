@@ -1062,7 +1062,7 @@
 //  return concatArr.sort((a,b)=>a-b)
 // };
 
-// console.log(merge([0],0,[1],1));
+// console.log(merge([1,2,3,0,0,0],3,[2,5,6],3));
 
 // let a = {}
 // let b = {key:"b"}
@@ -1563,4 +1563,180 @@
 // };
 
 // let result = findComplement(5);
+// console.log(result);
+
+// function min(arr, toReturn) {
+//     return  toReturn === 'value'?arr.sort((a,b)=>a-b)[0]:toReturn === 'index'?arr.sort((a,b)=>a-b).indexOf(arr[0]):''
+//    }
+
+//    let result = min([1,2,3,4,5],'value')
+//    console.log(result);
+
+// function calc(x) {
+//   let numArr = [];
+//   for (i = 0; i < x.length; i++) {
+//     numArr[i] = x.charCodeAt(i);
+//   }
+//  let num1 = numArr.join("");
+// console.log(num1);
+//   let num2 = "";
+//   if (num1.includes("7")) {
+//     num2 = num1.replace("7", "1");
+//   }
+
+//    num1 = Number(num1)
+//    num2 = Number(num2)
+
+//    return  Math.abs(Math.trunc(num1)-Math.trunc(num2))
+// }
+// let result = calc('aaaaaddddr');
+// console.log(result);
+
+// var subarraySum = function(nums, k) {
+//     let count = 0
+//     for(i=0;i<nums.length;i++){
+//         if(nums[i]+nums[i+1]===k || nums[i]===k){
+//             count++
+//         }
+//     }
+//     return count
+// };
+
+// let result = subarraySum([1,2,3],3)
+// console.log(result);
+
+// var findIntegers = function(n) {
+//     let binary = []
+//     for(i=0;i<=n;i++){
+//         binary.push(i.toString(2).split(''))
+//     }
+//     console.log(binary);
+//     let count=0
+//     for(i=0;i<binary.length;i++){
+//         for(j=0;j<binary[i].length;j++){
+//             if(binary[i][j] && binary[i][j+1]!==1){
+//                 count++
+//             }
+//             console.log(binary[i][j]);
+//         }
+//     }
+
+//     return count
+// };
+
+// let result = findIntegers(5)
+// console.log(result);
+
+// var reverseBits = function(n) {
+//     let reversedBinary = n.split('').reverse().join('')
+//     return parseInt(reversedBinary,2)
+// };
+
+// let result = reverseBits('00000010100101000001111010011100')
+// console.log(result);
+
+// var hammingWeight = function(n) {
+//     let count = 0
+//     for(i=0;i<n.length;i++){
+//         if(n[i]==='1'){
+//             count++
+//         }
+//     }
+//     return count
+// };
+
+// let result = hammingWeight('00000000000000000000000000001011')
+// console.log(result);
+
+// var addDigits = function(num) {
+//     let strNum = num.toString().split('')
+//     let newArr = []
+//     console.log(strNum);
+//     let i = 0
+//     while (newArr.length!=1) {
+//       newArr.push(parseInt(strNum[i])+parseInt(strNum[i+1]))
+//       newArr.toString().split('')
+//     }
+//     console.log(newArr);
+// };
+
+// let result = addDigits(38)
+
+// var moveZeroes = function(nums) {
+//     // Initialize a variable nonZeroIndex to keep track of non-zero elements
+//     let nonZeroIndex = 0;
+
+//     // Iterate through the array
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] !== 0) {
+//             // If the current element is non-zero:
+
+//             // Swap the non-zero element with the element at nonZeroIndex
+//             let temp = nums[i];
+//             nums[i] = nums[nonZeroIndex];
+//             nums[nonZeroIndex] = temp;
+
+//             // Increment nonZeroIndex to move to the next position for a non-zero element
+//             nonZeroIndex++;
+//         }
+//     }
+
+//     // Return the modified array with zeros moved to the end
+//     return nums;
+// };
+
+// let result =moveZeroes([0,1,0,3,12,0])
+// console.log(result);
+
+// var addToArrayForm = function (num, k) {
+//   let strNum = num.map((x) => x.toString());
+//   let joinedNum = BigInt(strNum.join(""));
+//   let sum = joinedNum + BigInt(k);
+//   let sumToStr = sum.toString().split("");
+//   return sumToStr.map((x) => parseInt(x));
+// };
+
+// let result = addToArrayForm([1, 2, 0, 0], 34);
+// console.log(result);
+
+
+// var prefixesDivBy5 = function(nums) {
+//     let newArr = []
+//     for(i=0;i<nums.length;i++){
+//         for(j=i;j>=0;j--){
+//             newArr.push(String(nums[j]))
+//         }
+//     }
+//     console.log(newArr);
+// };
+
+// let result = prefixesDivBy5([1,0,1])
+// console.log(result);
+
+
+// var duplicateZeros = function(arr) {
+//     let newArr = []
+//     let count = 0
+//     for(i=0;i<arr.length;i++){
+//         if(arr[i]===0){
+//             newArr.push(0)
+//             count++
+//         }
+//     }
+//     console.log(newArr);
+//     console.log(count);
+// };
+
+// let result = duplicateZeros([1,0,2,3,0,4,5,0])
+
+
+// var isAnagram = function(s, t) {
+//     let S = s.split('').sort().join('')
+//     let T = t.split('').sort().join('')
+//     console.log(S);
+//     console.log(T);
+//     return S===T
+// };
+
+// let result = isAnagram('anagram','nagaram')
 // console.log(result);
