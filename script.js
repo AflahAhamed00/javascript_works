@@ -1699,7 +1699,6 @@
 // let result = addToArrayForm([1, 2, 0, 0], 34);
 // console.log(result);
 
-
 // var prefixesDivBy5 = function(nums) {
 //     let newArr = []
 //     for(i=0;i<nums.length;i++){
@@ -1712,7 +1711,6 @@
 
 // let result = prefixesDivBy5([1,0,1])
 // console.log(result);
-
 
 // var duplicateZeros = function(arr) {
 //     let newArr = []
@@ -1729,7 +1727,6 @@
 
 // let result = duplicateZeros([1,0,2,3,0,4,5,0])
 
-
 // var isAnagram = function(s, t) {
 //     let S = s.split('').sort().join('')
 //     let T = t.split('').sort().join('')
@@ -1740,3 +1737,54 @@
 
 // let result = isAnagram('anagram','nagaram')
 // console.log(result);
+
+// var addTwoNumbers = function(l1, l2) {
+//     let reversedL1 = Number(l1.reverse().join(''))
+//     let reversedL2 = Number(l2.reverse().join(''))
+//     let sum = reversedL1 + reversedL2
+//     let strArr =sum.toString().split('').reverse()
+//     for(i=0;i<strArr.length;i++){
+//         strArr[i]=parseInt(strArr[i])
+//     }
+//     return strArr
+// };
+
+// let result = addTwoNumbers([9,9,9,9,9,9,9],[9,9,9,9])
+// console.log(result);
+
+// var findMaxConsecutiveOnes = function(nums) {
+//     let newArr = nums.toString().split('0')
+//     for(i=0;i<newArr.length;i++){
+//         newArr[i] = newArr[i].replace(/,/g,'').length
+//     }
+//     return newArr.sort((a,b)=>b-a)[0]
+// };
+
+// let result = findMaxConsecutiveOnes([1,1,0,1,1,1])
+// console.log(result);
+
+// var isAcronym = function(words, s) {
+//     let arr = []
+//     for(i=0;i<words.length;i++){
+//         arr.push(words[i][0])
+//     }
+//     return arr.join('')===s
+// };
+
+// let result = isAcronym( ["never","gonna","give","up","on","you"],"ngguoy")
+// console.log(result);
+
+function evil(n) {
+  let binary = n.toString(2);
+  let count = 0;
+  for (i = 0; i < binary.length; i++) {
+    if (binary[i] === "1") {
+      count++;
+    }
+  }
+
+  return count % 2 === 0 ? "evilish" : "odish";
+}
+
+let result = evil(99);
+console.log(result);
