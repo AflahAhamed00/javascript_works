@@ -1774,17 +1774,17 @@
 // let result = isAcronym( ["never","gonna","give","up","on","you"],"ngguoy")
 // console.log(result);
 
-function evil(n) {
-  let binary = n.toString(2);
-  let count = 0;
-  for (i = 0; i < binary.length; i++) {
-    if (binary[i] === "1") {
-      count++;
-    }
-  }
+// function evil(n) {
+//   let binary = n.toString(2);
+//   let count = 0;
+//   for (i = 0; i < binary.length; i++) {
+//     if (binary[i] === "1") {
+//       count++;
+//     }
+//   }
 
-  return count % 2 === 0 ? "evilish" : "odish";
-}
+//   return count % 2 === 0 ? "evilish" : "odish";
+// }
 
-let result = evil(99);
-console.log(result);
+// let result = evil(99);
+// console.log(result);
