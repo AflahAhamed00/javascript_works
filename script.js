@@ -1782,9 +1782,470 @@
 //       count++;
 //     }
 //   }
-
 //   return count % 2 === 0 ? "evilish" : "odish";
 // }
 
-// let result = evil(99);
+// let result = evil(7);
 // console.log(result);
+
+// var sumOfSquares = function (nums) {
+//   let newArr = [];
+
+//   for (i = 1; i <= nums.length; i++) {
+//     if (nums.length % i === 0) {
+//       newArr.push(Math.pow(nums[i - 1], 2));
+//     }
+//   }
+//   return newArr.reduce((a, b) => a + b);
+// };
+
+// let result = sumOfSquares([2, 7, 1, 19, 18, 3]);
+// console.log(result);
+
+// var reverse = function(x) {
+//   let bit = Math.pow(2,31) - 1
+
+//  let rev= x.toString().split('').reverse().join('')
+//  console.log(rev);
+
+//  let result = parseInt(rev)
+//  console.log(result)
+
+//  if(result > (bit) || result < -(bit)){
+//      return 0
+//  }
+
+//  if(x<0){
+//      return -result
+//  }else{
+//      return result
+//  }
+// };
+
+// let output = reverse(-1234567890)
+// console.log(output);
+
+// var myAtoi = function (s) {
+//   let S = s.trim();
+//   let regex = /\D/g;
+//   for (i = 0; i < s.length; i++) {
+//     if (regex.test(S) === true) {
+//       S = S.replace(regex, "").trim();
+//     }
+//   }
+//   return parseInt(S);
+// };
+
+// let result = myAtoi("words and 987");
+// console.log(result);
+
+// var romanToInt = function (s) {
+//   let Str = s.split("");
+//   let newArr = [];
+//   for (i = 0; i < Str.length; i++) {
+//     if (Str[i] === "I") {
+//       if (Str[i + 1] === "V") {
+//         newArr.push(4);
+//         i++;
+//       } else if (Str[i + 1] === "X") {
+//         newArr.push(9);
+//         i++;
+//       } else {
+//         newArr.push(1);
+//       }
+//     } else if (Str[i] === "V") {
+//       newArr.push(5);
+//     } else if (Str[i] === "X") {
+//       if (Str[i + 1] === "L") {
+//         newArr.push(40);
+//         i++;
+//       } else if (Str[i + 1] === "C") {
+//         newArr.push(90);
+//         i++;
+//       } else {
+//         newArr.push(10);
+//       }
+//     } else if (Str[i] === "L") {
+//       newArr.push(50);
+//     } else if (Str[i] === "C") {
+//       if (Str[i + 1] === "D") {
+//         newArr.push(400);
+//         i++;
+//       } else if (Str[i + 1] === "M") {
+//         newArr.push(900);
+//         i++;
+//       } else {
+//         newArr.push(100);
+//       }
+//     } else if (Str[i] === "D") {
+//       newArr.push(500);
+//     } else if (Str[i] === "M") {
+//       newArr.push(1000);
+//     } else {
+//       newArr.push(0);
+//     }
+//   }
+//   return newArr.reduce((a, b) => a + b, 0);
+// };
+
+// let result = romanToInt("MCMXCIV");
+// console.log(result);
+
+// var countSeniors = function(details) {
+//     let arr = []
+//     let newArr = []
+//     let reducedArr = []
+//     for(i=0;i<details.length;i++){
+//          arr.push(details[i].split(/\D/))
+//          newArr.push(arr[i].splice(1,1))
+//     }
+//     newArr = newArr.flat()
+
+//     for(i=0;i<newArr.length;i++){
+//       reducedArr.push(parseInt(newArr[i].slice(0,2)))
+//     }
+
+//     return  reducedArr.filter((x)=>x>60).length
+// };
+
+// let result = countSeniors(["7868190130M7522","5303914400F9211","9273338290F4010"])
+// console.log(result);
+
+// var separateDigits = function (nums) {
+//   let newArr = [];
+//   for (i = 0; i < nums.length; i++) {
+//     newArr.push(nums[i].toString().split(""));
+//   }
+//   newArr = newArr.flat();
+
+//   let numArr = newArr.map((x) => parseInt(x));
+
+//   return numArr;
+// };
+
+// let result = separateDigits([13, 25, 83, 77]);
+// console.log(result);
+
+// var minimizeSet = function (divisor1, divisor2, uniqueCnt1, uniqueCnt2) {
+//   let arr1 = [];
+//   let arr2 = [];
+//   for (i = 1; i <= uniqueCnt1; i++) {
+//     if (i % divisor1 !== 0) {
+//       arr1.push(i);
+//     }
+//   }
+
+//   for (i = 1; i <= uniqueCnt2;) {
+//     if (i % divisor2 !== 0) {
+//       if (!arr1.includes(i)===true) {
+//         i++;
+//         console.log(!arr1.includes(i));
+//       } else {
+//         arr2.push(i);
+//         i++
+//       }
+//     }
+//   }
+
+//   let newArr = arr1.concat(arr2);
+//   console.log(newArr);
+//   return newArr.sort((a, b) => a - b)[newArr.length - 1];
+// };
+
+// let result = minimizeSet(2, 7, 1, 3);
+// console.log(result);
+
+// var alternateDigitSum = function(n) {
+//     let newArr = []
+//     let strArr = n.toString().split('')
+//     let numArr = strArr.map((x)=>parseInt(x))
+//     for(i=0;i<numArr.length;i++){
+//         if(i%2==0){
+//             newArr.push(numArr[i])
+//         }else{
+//             newArr.push(-numArr[i])
+//         }
+//     }
+//     return newArr.reduce((a,b)=>a+b,0)
+// };
+
+// let result = alternateDigitSum(521)
+// console.log(result);
+
+// var findNumbers = function(nums) {
+//     nums = nums.toString().split(',')
+//     console.log(nums);
+//     let count = 0
+//     for(i=0;i<nums.length;i++){
+//         if(nums[i].length % 2 === 0){
+//             count++
+//         }
+//     }
+//     return count
+// };
+
+// let result = findNumbers([12,345,2,6,7896])
+// console.log(result);
+
+// var removeDuplicates = function(nums) {
+//     let arr = [...new Set(nums)]
+//     return arr.length
+//   };
+
+//   let result = removeDuplicates([1,1,2])
+//   console.log(result);
+
+// var removeElement = function(nums, val) {
+//     // let k=nums.length;
+//     // for(let i=0;i<nums.length;i++){
+//     //     if(nums[i]==val){
+//     //         nums[i] = '_';
+//     //         k-=1;
+//     //     }
+//     // }
+//     // nums.sort();
+//     // console.log(nums,k)
+//     // return k;
+
+//     for(i=0;i<nums.length;i++){
+//                 if(nums[i]=== val){
+//                     nums.splice(i,1)
+//                 }
+
+//     }
+//     return nums
+// };
+
+// let result = removeElement([3,2,2,3],2)
+// console.log(result);
+
+// let n =5
+// let arr = []
+// let newArr = []
+// for(i=1;i<=n;i++){
+//     arr.push(i)
+// }
+// for(i=0;i<arr.length;i++){
+//     if(arr[i]%2!==0){
+//         newArr.push(Math.pow(arr[i],2))
+//     }
+// }
+
+// let sum = newArr.reduce((a,b)=>a+b,0)
+// console.log(sum);
+
+// let N = 2
+// let L =4
+// let arr =[]
+
+// for(i=1;i<=N*L;i+=2){
+//  console.log([i,i+1])
+// }
+
+// let str = 'Hello!!'
+// str = str.split('')
+// for(i=0;i<str.length;i++){;
+//     if(str[i]===str[i].toLowerCase()){
+//         str[i]=str[i].toUpperCase()
+
+//     }else{
+//         str[i]=str[i].toLowerCase()
+//         console.log(str[i]);
+//     }
+// }
+
+// console.log(str.join(''));
+
+// let M = 125
+
+// console.log(Math.floor(M/60)+'h '+ M%60+'m')
+
+// let s = 'abc';
+// let arr = []
+// // Write an answer using console.log()
+// // To debug: console.error('Debug messages...');
+// for(i=0;i<s.length;i++){
+//     arr.push(s.charCodeAt(i))
+// }
+
+// console.log((arr.reduce((a,b)=>a+b,0)/arr.length).toFixed(1));
+
+// let S = 'abcdefghijk';
+// S = S.split('')
+// let j = 1
+// // Write an answer using console.log()
+// // To debug: console.error('Debug messages...');
+//  for(let i=0;i<S.length;i++){
+//   S.splice(i+1,j)
+//     j++
+// }
+// console.log(S);
+
+// let input = 7;
+
+// function fibonacci(arr) {
+//   let len = arr.length;
+
+//   if (len === input) {
+//     return;
+//   }
+
+//   let n = arr.length;
+//   arr.push(arr[n - 1] + arr[n - 2]);
+//   fibonacci(arr);
+// }
+
+// let resultArray = [0, 1];
+// fibonacci(resultArray);
+
+// console.log(resultArray);
+
+// const num = 23;
+// console.log(num.toString().split('').map((x)=>parseInt(x)).reduce((a,b)=>a*b,1));
+
+// const l ='codingame';
+
+// // // Write an answer using console.log()
+// // // To debug: console.error('Debug messages...');
+// // // let strArr = l.split('');
+// let newArr=[]
+// let changedArr = []
+// for(i=0;i<l.length;i++){
+//     newArr.push(String.fromCharCode((l.charCodeAt(i)+i)))
+// }
+// console.log(newArr.join(''));
+
+// var coinChange = function(coins, amount) {
+//     let count = 0
+//     let j = amount
+//     let sum = 0
+//     coins.sort((a,b)=>b-a)
+//     for(i=0;i<coins.length;i++){
+//         while(coins[i]<=j){
+//             count++
+//             j -=coins[i]
+//             sum+=coins[i]
+//         }
+//     }
+//     console.log(sum,count);
+//     return sum === amount ? count : -1
+// };
+
+// let result = coinChange([186,419,83,408],6249)
+// console.log(result);
+
+// var largestNumber = function(nums) {
+//     nums = nums.join("").split('')
+//     nums = nums.map((x)=>parseInt(x)).sort((a,b)=>b-a).join('')
+// };
+
+// var largestNumber = function(nums) {
+//     nums = nums.map(String);
+//     let largestNumber = nums.sort((a, b) => (b + a).localeCompare(a + b)).join('');
+//     return largestNumber;
+// };
+
+// let result = largestNumber([3,30,34,5,9])
+// console.log(result);
+
+// var productExceptSelf = function (nums) {
+//   let newArr = [];
+//   let nextArr = [];
+//   let prodArr = [];
+//   let n = nums.length - 1;
+//   for (i = 0; i < nums.length; i++) {
+//     for (j = 0; j < nums.length; j++) {
+//       if (i !== j) {
+//         newArr.push(nums[j]);
+//       }
+//     }
+//   }
+//   for (i = 0; i < newArr.length; ) {
+//     nextArr.push(newArr.splice(i, n));
+//   }
+
+//   for (i = 0; i < nextArr.length; i++) {
+//     prodArr.push(nextArr[i].reduce((a, b) => a * b, 1));
+//   }
+//   return prodArr;
+// };
+
+// var productExceptSelf = function(nums) {
+//   let len = nums.length;
+//     let results = [];
+//     for(let i = 0; i < len; i++) {
+//         let product = 1;
+//         for(let j = 0; j < len; j++) {
+//             if(i == j) continue;
+//             product *= nums[j];
+//         }
+//         results[i] = product;
+//     }
+//     return results
+// };
+
+// let result = productExceptSelf([1,2,3,4,5])
+// console.log(result);
+
+// var maxProduct = function(nums) {
+//   let arr = []
+//   for(i=0;i<nums.length;i++){
+//       for(j=0;j<nums.length;j++){
+//           if(i==j)continue
+//           arr.push((nums[i]-1) * (nums[j]-1))
+//       }
+//   }
+//   return arr.sort((a,b)=>b-a)[0]
+// };
+
+// let result = maxProduct([1,5,4,5])
+// console.log(result);
+
+// var search = function (nums, target) {
+//   let low = 0;
+//   let high = nums.length - 1;
+//   while (low <= high) {
+//     let mid = Math.floor((low + high) / 2);
+//     if (target === nums[mid]) {
+//       return mid;
+//     } else if (target > nums[mid]) {
+//       low = mid + 1;
+//     } else {
+//       high = mid - 1;
+//     }
+//   }
+//   return -1;
+// };
+
+// let result = search([-1, 0, 3, 5, 9, 12], 5);
+// console.log(result);
+
+
+// function maxPairs(skillLevel, minDiff) {
+//   let count = 0
+//   skillLevel = [...new Set(skillLevel)]
+//   for(let i=0;i<skillLevel.length-1;i++){
+//       for(let j=i+1;j<skillLevel.length;j++){
+//           if(Math.abs(skillLevel[i]-skillLevel[j])===minDiff){
+//               count++
+//           }
+//       }
+//   }
+//   return count
+// }
+
+// let result = maxPairs([3,4,5,2,1,1],3)
+// console.log(result);
+
+function triangularSum(nums){
+  while(nums.length>1){
+    for(i=0;i<nums.length;i++){
+      nums[i]=(nums[i] + nums[i+1]) % 10
+    }
+    nums.pop()
+  }
+  return nums
+}
+
+let result = triangularSum([2,3,4,5,6,7])
+console.log(result);
